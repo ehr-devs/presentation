@@ -1,0 +1,254 @@
+/* ===== Reset de base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffae00;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    scroll-margin-top: 140px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1e1e2f;
+    border-bottom: 2px solid #ffae00;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ===== A propos de nous ===== */
+#aboutme div {
+    margin-bottom: 40px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#aboutme div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+#aboutme strong {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #1e1e2f;
+}
+
+#aboutme p {
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+/* ===== Portfolio ===== */
+.portfolio div {
+    margin-bottom: 40px;
+}
+
+/* Chaque projet */
+.project {
+    margin-bottom: 100px;
+}
+
+/* Conteneur images  <= c est ici que tu change le groupe d image de chaque projet */ 
+.pictures {
+    position: relative;
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: #f8f7f7;
+    border: 5px solid rgba(255, 174, 0, 0.08);
+    border-radius: 8px;
+}
+
+.pictures img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 5px solid rgba(0,0,0,0.02);
+    border-radius: 8px;
+    transition: transform 0.2s, opacity 0.5s ease-in-out;
+}
+
+.pictures img:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.pictures img.first {
+    position: relative;
+    opacity: 1;
+    z-index: 0;
+}
+.pictures img:not(.first) {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.password_generator .pictures img {
+    max-width: 500px;
+}
+
+/*.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+    justify-content: center;
+    align-items: flex-start;
+}*/
+
+/* Image de Messagerie instantanée : 3 images par ligne */
+/*.instant_messaging .pictures img {
+    flex: 1 1 100%;
+    height: auto;
+    min-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}*/
+
+/* Image de Générateur de mot de passe : 2 images par ligne */
+/*.password_generator .pictures img {
+    flex: 1 1 calc(50% - 10px);
+    width: 100%;
+    height: auto;
+    max-width: 500px;   
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}*/
+
+/* Hover effect pour toutes les images */
+/*.pictures img:hover {
+    transform: scale(1.05);
+}*/
+
+
+
+/* ===== Services ===== */
+#services ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#services li {
+    background-color: #fff;
+    padding: 20px;
+    flex: 1 1 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+#services li:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Contact ===== */
+#contact p a {
+    color: #1e1e2f;
+    text-decoration: underline;
+}
+
+#contact p a:hover {
+    color: #ffae00;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Le cas ou l ecran ou la taille du site mesure une taille specifique */
+/* ===== Responsive ===== */
+@media screen and (max-width: 768px) {
+    .instant_messaging .pictures img,
+    .password_generator .pictures img {
+        flex: 1 1 100%;
+    }
+
+    #services ul {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .instant_messaging .pictures img,
+    .password_generator .pictures img {
+        flex: 1 1 100%;
+        max-width: 100%; /* annule la limite sur mobile */
+    }
+}
