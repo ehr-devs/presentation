@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./javascript/script.js" defer></script>
+    <script src="./javascript/script_slideShow.js" defer></script>
+    <script src="./javascript/script_contactShow.js" defer></script>
     <title>Presentation</title>
 </head>
 <body>
     <header>
-        <h1>EHR devs</h1>
+        <h1 style="display:none">EHR devs</h1>
+        <img src="./img/logo_clair.png" alt="EHR-devs logo">
         <h2>Des sites et logiciels fait sur mesures</h2>
         <nav>
             <a href="#aboutme">A propos de nous</a> 
@@ -69,12 +71,13 @@
             <h2>Services</h2>
             <ul>
                 <li>
-                    <h3>Site web modernes</h3>
+                    <h3>Sites web modernes</h3>
                     <p>Conception responsive et design moderne.</p>
                 </li>
                 <li>
                     <h3>Logiciels sur mesure</h3>
                     <p>Développement de logiciels pour répondre à differents types de besoins</p>
+                </li>
                 <li>
                     <h3>Maintenance et support</h3>
                     <p>Mises à jour, corrections de bugs et assistance technique.</p>
@@ -84,11 +87,25 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p><strong>Nos services vous intéressent ?</strong> Un simple clic et votre idée mérite de devenir réalité.</p>
-            <section>
-                <p>Email : <a href="mailto:re.elhamzaoui@gmail.com">re.elhamzaoui@gmail.com</a> </p>
-                <p>Telephone : <a href="tel:+33777896777">07 77 89 67 77</a></p>
-            </section>
+            <div class="contact_form" id="contactForm">
+                <p id="contact_slogan"><strong>Nos services vous intéressent ?</strong> Un simple clic et votre idée mérite de devenir réalité.</p>
+                  
+                <form action="https://formspree.io/f/xqadvoov" method="POST">
+                    <input type="email" name="email" placeholder="Email">
+                    
+                    <input name="message" placeholder="Message">
+                    
+                    <button type="submit">Envoyer</button>
+                </form>
+
+                <div class="contact_alt">
+                    <h3>Le formulaire ne marche pas ? : </h3>
+                
+                    <p>Telephone : <a href="tel:+33777896777">07 77 89 67 77</a></p>
+                    <p>Email : <a href="mailto:re.elhamzaoui@gmail.com">re.elhamzaoui@gmail.com</a></p>
+                </div>
+                
+            </div>
         </section>
     </main>
 

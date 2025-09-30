@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     tooltip.textContent = "Cliquer";
     tooltip.className = "tooltip";
     tooltip.style.position = "absolute";
+    tooltip.style.top = "0";
     tooltip.style.background = "rgba(0,0,0,0.1)";
     tooltip.style.color = "white";
     tooltip.style.padding = "5px 10px";
