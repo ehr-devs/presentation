@@ -36,7 +36,7 @@ header h1 {
 
 header img {
     width: 100px;
-    margin: 20px 40px;
+    margin: 20px 40px 10px 40px;
 }
 
 header h2 {
@@ -55,7 +55,7 @@ header nav {
 header nav a {
     display: inline-block;
     width: 25%;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
     text-align: center;
     color: #fff;
@@ -358,10 +358,6 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    header {
-        padding: 15px 20px;
-    }
-
     .instant_messaging .pictures img,
     .password_generator .pictures img {
         flex: 1 1 100%;
