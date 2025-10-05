@@ -8,7 +8,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 30px; 
 }
 
 body {
@@ -28,23 +27,23 @@ header {
 
 header h1 {
     font-size: 2.2rem;
-    margin-bottom: 5px;
     margin: 0px 40px;
 }
 
 header img {
     width: 100px;
-    margin: 20px 40px 10px 40px;
+    margin: 0px 40px;
 }
 
 header h2 {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 15px;
-    margin: 0px 40px 20px 40px;
+    margin: 0px 40px;
+    padding-bottom: 10px;
 }
 
-header nav {
+nav {
+    z-index: 1000;
     position: sticky;
     top: 0;
     display: flex;
@@ -52,21 +51,26 @@ header nav {
     justify-content: space-evenly;
 }
 
-header nav a {
-    display: inline-block;
-    width: 25%;
-    padding: 15px;
+nav a {
+    font-size: 0.8rem;
     text-decoration: none;
     text-align: center;
-    color: #fff;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 25%;
+    padding: 15px;
     border: 1px solid rgb(50, 50, 78);
     box-shadow: 0px 0 15px rgba(80, 80, 126, 0.6);
+    color: #fff;
     background-color: #1e1e2f;
-    font-weight: 500;
     transition: color 0.3s, background-color 0.3s;
 }
 
-header nav a:hover {
+nav a:hover {
     color: #ffae00;
     background-color: #292942;
 }
@@ -76,7 +80,7 @@ section {
     padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
-    scroll-margin-top: 140px;
+    scroll-margin-top: 20px;
 }
 
 section h2 {
@@ -341,6 +345,20 @@ footer {
 /* Le cas ou l ecran ou la taille du site mesure une taille specifique */
 /* ===== Responsive ===== */
 @media screen and (max-width: 768px) {
+    nav a:first-child span {
+        display: none; /* cache le texte original */
+    }
+
+    nav a:first-child::after {
+        content: "Nous"; /* nouveau texte */
+        color: white;
+        font-size: 0.8rem;
+    }
+
+    nav a:first-child:hover::after {
+        color: #ffae00
+    }
+
     .instant_messaging .pictures img,
     .password_generator .pictures img {
         flex: 1 1 100%;
